@@ -29,7 +29,7 @@ module CasbinRedisWatcher
     end
 
     def check_messages(delay)
-      fork do
+      pid = fork do
         redis.subscribe(REDIS_CHANNEL_NAME) do |on|
           on.message { |_channel, _message| update_callback.call }
         end
@@ -37,6 +37,8 @@ module CasbinRedisWatcher
         puts 'try reconnect'
         redis_casbin_subscription(delay + 10)
       end
+
+      Process.detach(pid)
     end
   end
 end
