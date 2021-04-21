@@ -29,7 +29,7 @@ module CasbinRedisWatcher
     end
 
     def check_messages(delay)
-      fork do
+      Thread.new do
         redis.subscribe(REDIS_CHANNEL_NAME) do |on|
           on.message { |_channel, _message| update_callback.call }
         end
