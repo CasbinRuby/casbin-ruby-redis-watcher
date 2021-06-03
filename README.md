@@ -4,13 +4,13 @@ Casbin role watcher to be used for monitoring updates to casbin policies
 
 ### Installation
 ```
-gem 'casbin'
+gem 'casbin-ruby'
 gem 'casbin-ruby-redis-watcher'
 ```
 
 ### Basic Usage
 ```
-require 'casbin'
+require 'casbin-ruby'
 require 'casbin-ruby-redis-watcher'
 
 enforcer = Casbin::Enforcer.new("path/to/model.conf", "path/to/policy.csv")
