@@ -29,3 +29,6 @@ RSpec/MultipleExpectations:
 
 RSpec/ExampleLength:
   Enabled: false
+
+Naming/FileName:
+  Enabled: false

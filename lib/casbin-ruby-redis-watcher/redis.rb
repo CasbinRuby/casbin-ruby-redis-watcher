@@ -2,8 +2,8 @@
 
 require 'redis'
 
-module CasbinRedisWatcher
-  class RedisWatcher
+module CasbinWatcher
+  class Redis
     REDIS_CHANNEL_NAME = 'casbin-role-watcher'
 
     attr_accessor :update_callback

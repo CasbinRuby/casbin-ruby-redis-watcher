@@ -1,11 +1,11 @@
 # frozen_string_literal: true
 
 $LOAD_PATH.push File.expand_path('lib', __dir__)
-require 'casbin_redis_watcher/version'
+require 'casbin-ruby-redis-watcher/version'
 
 Gem::Specification.new do |s|
   s.name        = 'casbin-ruby-redis-watcher'
-  s.version     = CasbinRedisWatcher::VERSION
+  s.version     = CasbinWatcher::VERSION
   s.platform    = Gem::Platform::RUBY
   s.authors     = ['Igor Kutyavin']
   s.email       = ['konayre@evrone.com']
