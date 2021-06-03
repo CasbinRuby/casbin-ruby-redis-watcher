@@ -1,8 +1,8 @@
 # frozen_string_literal: true
 
-require 'casbin_redis_watcher/redis_watcher'
+require 'casbin-ruby-redis-watcher/redis'
 
-describe CasbinRedisWatcher::RedisWatcher do
+describe CasbinWatcher::Redis do
   let(:redis) { instance_double(Redis) }
 
   before do
