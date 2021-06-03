@@ -9,7 +9,7 @@ gem 'casbin-ruby-redis-watcher'
 ```
 
 ### Basic Usage
-```
+```ruby
 require 'casbin-ruby'
 require 'casbin-ruby-redis-watcher'
 
