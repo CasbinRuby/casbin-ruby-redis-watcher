@@ -16,7 +16,7 @@ require 'casbin-ruby-redis-watcher'
 enforcer = Casbin::Enforcer.new("path/to/model.conf", "path/to/policy.csv")
 redis = Redis.new
 watcher = CasbinWatcher::Redis.new(redis)
-watcher.set_update_callback(enforcer.e.load_policy)
+watcher.update_callback = -> { enforcer.load_policy }
 enforcer.watcher = watcher
 
 ```
